@@ -125,6 +125,7 @@ label {
 .card {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 2;
   width: 300px;
@@ -136,8 +137,8 @@ label {
 
 .card > .wwish {
   color: black;
-  position: fixed;
-  top: 50vh;
+  /* position: fixed; */
+  /* top: 45vh; */
   width: 280px;
   text-align: center;
   font-size: larger;
@@ -157,6 +158,9 @@ label {
 }
 
 .close {
+  position: fixed;
+  top: 5vh;
+
   font-size: 19px;
   width: 30px;
   height: 30px;
