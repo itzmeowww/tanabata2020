@@ -29,13 +29,13 @@ $(document).ready(() => {
 
   $(".readmore").on("click", () => {
     console.log("click");
-    $("#more").slideDown();
+    $("#more").slideDown(2000);
     $(".readmore").hide();
     $(".closereadmore").show();
   });
 
   $(".closereadmore").on("click", () => {
-    $("#more").slideUp();
+    $("#more").slideUp(1500);
     $(".readmore").show();
     $(".closereadmore").hide();
   });
