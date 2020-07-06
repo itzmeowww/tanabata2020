@@ -12,15 +12,15 @@ firebase.initializeApp(firebaseConfig);
 let db = firebase.firestore();
 
 $(document).ready(() => {
-  $(".bamboo").on("click touchstart", () => {
+  $(".bamboo").on("click", () => {
     $(".card").show();
-    $(".card").on("click touchstart", () => {
+    $(".card").on("click", () => {
       $(".card").hide();
     });
   });
   let myWish = "";
   //pls optimize
-  $("#label1").on("click touchstart", () => {
+  $("#label1").on("click", () => {
     if ($("#label1").attr("lang") != "thai") {
       $("#label1").attr("lang", "thai");
       $("#label1").text("ขอให้มีความสุข");
@@ -29,7 +29,7 @@ $(document).ready(() => {
       $("#label1").text("幸せになりますように。");
     }
   });
-  $("#label2").on("click touchstart", () => {
+  $("#label2").on("click", () => {
     if ($("#label2").attr("lang") != "thai") {
       $("#label2").attr("lang", "thai");
       $("#label2").text("ขอให้มีสุขภาพแข็งแรง");
@@ -38,7 +38,7 @@ $(document).ready(() => {
       $("#label2").text("健康でありますように。");
     }
   });
-  $("#label3").on("click touchstart", () => {
+  $("#label3").on("click", () => {
     if ($("#label3").attr("lang") != "thai") {
       $("#label3").attr("lang", "thai");
       $("#label3").text("ขอให้เจอเนื้อคู่");
@@ -47,7 +47,7 @@ $(document).ready(() => {
       $("#label3").text("運命の人に出会えますように。");
     }
   });
-  $("#label4").on("click touchstart", () => {
+  $("#label4").on("click", () => {
     if ($("#label4").attr("lang") != "thai") {
       $("#label4").attr("lang", "thai");
       $("#label4").text("ขอให้ปีนี้เป็นปีที่ดีเยี่ยม");
@@ -56,7 +56,7 @@ $(document).ready(() => {
       $("#label4").text("素晴らしい年になりますように。");
     }
   });
-  $("#label5").on("click touchstart", () => {
+  $("#label5").on("click", () => {
     if ($("#label5").attr("lang") != "thai") {
       $("#label5").attr("lang", "thai");
       $("#label5").text("ขอให้โลกสงบสุข");

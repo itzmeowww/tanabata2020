@@ -141,3 +141,13 @@ label {
   top: 80vh;
   text-align: center;
 }
+
+.close {
+  font-size: 19px;
+  width: 30px;
+  height: 30px;
+  background-color: snow;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
