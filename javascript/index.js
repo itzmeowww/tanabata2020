@@ -53,8 +53,8 @@ $(document).ready(() => {
     } else {
       $(".card").show();
       console.log(data[id]);
-      $(".name").text(data[id].name);
-      $(".wish").text(data[id].wish);
+      $(".wname").text(data[id].name);
+      $(".wwish").text(data[id].wish);
 
       $(".card").css("background-color", tone[data[id].color]);
     }
