@@ -13,6 +13,52 @@ let db = firebase.firestore();
 
 $(document).ready(() => {
   let myWish = "";
+  //pls optimize
+  $("#label1").on("click touchstart", () => {
+    if ($("#label1").attr("lang") != "thai") {
+      $("#label1").attr("lang", "thai");
+      $("#label1").text("ขอให้มีความสุข");
+    } else {
+      $("#label1").attr("lang", "jap");
+      $("#label1").text("幸せになりますように。");
+    }
+  });
+  $("#label2").on("click touchstart", () => {
+    if ($("#label2").attr("lang") != "thai") {
+      $("#label2").attr("lang", "thai");
+      $("#label2").text("ขอให้มีสุขภาพแข็งแรง");
+    } else {
+      $("#label2").attr("lang", "jap");
+      $("#label2").text("健康でありますように。");
+    }
+  });
+  $("#label3").on("click touchstart", () => {
+    if ($("#label3").attr("lang") != "thai") {
+      $("#label3").attr("lang", "thai");
+      $("#label3").text("ขอให้เจอเนื้อคู่");
+    } else {
+      $("#label3").attr("lang", "jap");
+      $("#label3").text("運命の人に出会えますように。");
+    }
+  });
+  $("#label4").on("click touchstart", () => {
+    if ($("#label4").attr("lang") != "thai") {
+      $("#label4").attr("lang", "thai");
+      $("#label4").text("ขอให้ปีนี้เป็นปีที่ดีเยี่ยม");
+    } else {
+      $("#label4").attr("lang", "jap");
+      $("#label4").text("素晴らしい年になりますように。");
+    }
+  });
+  $("#label5").on("click touchstart", () => {
+    if ($("#label5").attr("lang") != "thai") {
+      $("#label5").attr("lang", "thai");
+      $("#label5").text("ขอให้โลกสงบสุข");
+    } else {
+      $("#label5").attr("lang", "jap");
+      $("#label5").text("せかいがへいわになりますように。");
+    }
+  });
   $("#my-form").submit((e) => {
     e.preventDefault();
     let wishlist = [
