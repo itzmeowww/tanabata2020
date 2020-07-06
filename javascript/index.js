@@ -12,9 +12,9 @@ firebase.initializeApp(firebaseConfig);
 let db = firebase.firestore();
 
 $(document).ready(() => {
-  $(".bamboo").click(() => {
+  $(".bamboo").on("click touchstart", () => {
     $(".card").show();
-    $(".card").click(() => {
+    $(".card").on("click touchstart", () => {
       $(".card").hide();
     });
   });
