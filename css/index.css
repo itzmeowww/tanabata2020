@@ -46,6 +46,10 @@ body {
   .date {
     margin-top: 20px;
   }
+  .title {
+    margin-top: 20px;
+    font-size: 28px;
+  }
 }
 @media screen and (min-width: 500px) {
   .date,
@@ -68,11 +72,10 @@ body {
   .date {
     margin-top: 20px;
   }
-}
-
-.title {
-  margin-top: 20px;
-  font-size: 48px;
+  .title {
+    margin-top: 20px;
+    font-size: 48px;
+  }
 }
 
 .desc {
