@@ -47,7 +47,9 @@ $(document).ready(() => {
   });
   $(".bamboo").on("click", () => {
     console.log(wishesId);
-    let id = wishesId[Math.round(Math.random() * wishesId.length)];
+    let i = Math.round(Math.random() * wishesId.length);
+    if (i >= wishesId.length) i = 0;
+    let id = wishesId[i];
     if (id == undefined) {
       alert("We are loading <3");
     } else {
