@@ -18,10 +18,28 @@ let tone = {
   red: "#fe6961",
   white: "snow",
   violet: "#cb99c9",
-  blue: "#aec64f",
+  blue: "#aec6cf",
   yellow: "#fdfd96",
 };
 $(document).ready(() => {
+  $("#opt").on("click", () => {
+    console.log("eiei");
+    $("#wishopt").prop("checked", true);
+  });
+
+  $(".readmore").on("click", () => {
+    console.log("click");
+    $("#more").slideDown();
+    $(".readmore").hide();
+    $(".closereadmore").show();
+  });
+
+  $(".closereadmore").on("click", () => {
+    $("#more").slideUp();
+    $(".readmore").show();
+    $(".closereadmore").hide();
+  });
+
   db.collection("wishes").onSnapshot((snap) => {
     for (let i = 0; i < snap.docs.length; i++) {
       let id = snap.docs[i].id;
@@ -29,6 +47,7 @@ $(document).ready(() => {
       } else {
         checkId[id] = 1;
         wishesId.push(id);
+        $(".wishes").text(wishesId.length + " wishes");
         db.collection("wishes")
           .doc(id)
           .onSnapshot((doc) => {

@@ -82,8 +82,11 @@ body {
 }
 
 .desc {
-  margin-left: 30vw;
-  margin-right: 30vw;
+  word-break: keep-all;
+  text-align: center;
+  color: lightgray;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 input,
@@ -153,4 +156,19 @@ label {
   color: black;
   text-align: center;
   cursor: pointer;
+}
+.readmore,
+.closereadmore {
+  margin-bottom: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.readmore:hover,
+.closereadmore:hover {
+  margin-bottom: 20px;
+  color: blueviolet;
 }
