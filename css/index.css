@@ -77,7 +77,7 @@ body {
   .title {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 
@@ -131,14 +131,14 @@ label {
   background-color: lightgreen;
 }
 
-.card > .wish {
+.card > .wwish {
   color: black;
   position: fixed;
   top: 50vh;
   text-align: center;
   font-size: larger;
 }
-.card > .name {
+.card > .wname {
   color: black;
   position: fixed;
   top: 80vh;
