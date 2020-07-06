@@ -12,6 +12,12 @@ firebase.initializeApp(firebaseConfig);
 let db = firebase.firestore();
 
 $(document).ready(() => {
+  $(".bamboo").click(() => {
+    $(".card").show();
+    $(".card").click(() => {
+      $(".card").hide();
+    });
+  });
   let myWish = "";
   //pls optimize
   $("#label1").on("click touchstart", () => {
@@ -95,6 +101,7 @@ $(document).ready(() => {
           wish: myWish,
         })
         .then(() => {
+          alert("Success!");
           console.log("Added");
         });
     }

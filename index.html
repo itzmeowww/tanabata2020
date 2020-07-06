@@ -7,6 +7,12 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
   </head>
   <body>
+    <div class="card-holder">
+      <div class="card" style="display: none;">
+        <div class="wish">This is the wish</div>
+        <div class="name">Name</div>
+      </div>
+    </div>
     <div class="body-div">
       <img class="img-kvis" src="pics/kvis.png" />
       <div class="date">
@@ -40,6 +46,9 @@
           </div>
           <div class="desc3">
             Your wish :
+          </div>
+          <div class="tip">
+            TIP! : click on Japanese text to translate
           </div>
           <div class="wish">
             <input
@@ -92,12 +101,15 @@
               <option value="red">Red</option>
               <option value="yellow">Yellow</option>
               <option value="violet">Violet</option>
+              <option value="white">White</option>
             </select>
           </div>
           <input class="btn" type="submit" value="Make a wish" />
         </form>
       </div>
+      TIP! : click on the bamboo to view a random wish
       <div class="bamboo">
+        <div class="tip"></div>
         <img class="bamboo-img" src="pics/bamboo.png" />
       </div>
     </div>
