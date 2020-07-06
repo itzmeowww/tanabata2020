@@ -138,14 +138,22 @@ label {
   color: black;
   position: fixed;
   top: 50vh;
+  width: 280px;
   text-align: center;
   font-size: larger;
+  white-space: initial;
+  word-break: break-all;
 }
 .card > .wname {
   color: black;
   position: fixed;
   top: 80vh;
+
+  width: 280px;
   text-align: center;
+  font-size: larger;
+  white-space: initial;
+  word-break: break-all;
 }
 
 .close {
