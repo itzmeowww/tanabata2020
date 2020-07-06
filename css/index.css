@@ -47,10 +47,12 @@ body {
     margin-top: 20px;
   }
   .title {
+    margin-bottom: 20px;
     margin-top: 20px;
     font-size: 28px;
   }
 }
+
 @media screen and (min-width: 500px) {
   .date,
   .desc,
@@ -74,6 +76,7 @@ body {
   }
   .title {
     margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 48px;
   }
 }

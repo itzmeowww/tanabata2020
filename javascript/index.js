@@ -1,4 +1,4 @@
-var firebaseConfig = {
+let firebaseConfig = {
   apiKey: "AIzaSyAzpnkmJ5G3yF0wx25Rgjqdq7GDMomuxNk",
   authDomain: "tanabata-5380a.firebaseapp.com",
   databaseURL: "https://tanabata-5380a.firebaseio.com",
@@ -11,12 +11,53 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 let db = firebase.firestore();
 
+let wishesId = [];
+let checkId = {};
+let data = {};
+let tone = {
+  red: "#fe6961",
+  white: "snow",
+  violet: "#cb99c9",
+  blue: "#aec64f",
+  yellow: "#fdfd96",
+};
 $(document).ready(() => {
+  db.collection("wishes").onSnapshot((snap) => {
+    for (let i = 0; i < snap.docs.length; i++) {
+      let id = snap.docs[i].id;
+      if (id in checkId) {
+      } else {
+        checkId[id] = 1;
+        wishesId.push(id);
+        db.collection("wishes")
+          .doc(id)
+          .onSnapshot((doc) => {
+            console.log(doc.data());
+            data[id] = {
+              color: doc.data().color,
+              wish: doc.data().wish,
+              name: doc.data().name,
+            };
+          });
+      }
+    }
+  });
+  $(".card").on("click", () => {
+    $(".card").hide();
+  });
   $(".bamboo").on("click", () => {
-    $(".card").show();
-    $(".card").on("click", () => {
-      $(".card").hide();
-    });
+    console.log(wishesId);
+    let id = wishesId[Math.round(Math.random() * wishesId.length)];
+    if (id == undefined) {
+      alert("We are loading <3");
+    } else {
+      $(".card").show();
+      console.log(data[id]);
+      $(".name").text(data[id].name);
+      $(".wish").text(data[id].wish);
+
+      $(".card").css("background-color", tone[data[id].color]);
+    }
   });
   let myWish = "";
   //pls optimize
