@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make a wish on Tanabata day</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  </head>
+  <body>
+    <div class="body-div">
+      <img class="img-kvis" src="pics/kvis.png" />
+      <div class="date">
+        7.7.2020
+      </div>
+      <div class="title">
+        <span class="jap1">七夕</span>
+        ー Tanabata
+      </div>
+      <!-- <div class="desc">
+        ทานาบาตะ 七夕 หมายถึงยามเย็นของวันที่เจ็ด
+        เป็นเทศกาลเฉลิมฉลองตามดวงดาวของญี่ปุ่น
+        เนื่องจากการพบกันของนางฟ้าโอริฮิเมะ ( ดาวเวกา ) และฮิโกโบชิ ( ดาวอัลแทร์
+        ) ผู้เลี้ยงวัวบนสวรรค์ โดยอ้างอิงจากตำนานในอดีตว่า ทางช้างเผือก
+        คือแม่น้ำของดวงดาวพาดผ่านท้องฟ้า ได้แยกคู่รักคือโอริฮิเมะ
+        และฮิโกโบชิไม่ให้ได้อยู่กินด้วยกันฉันสามีภรรยา
+        แต่อนุญาตให้พบกันเพียงปีละหนึ่งครั้งในวันที่เจ็ดของเดือนที่เจ็ดตามปฏิทินสุริยะจันทรคติ
+        เทศกาลเฉลิมฉลองมีขึ้นตอนกลางคืนของวันนั้น ในวันเทศกาลทานาบาตะ
+        ผู้คนจะเขียนคำอธิษฐานลงบนกระดาษแผ่นเล็กๆ ที่เรียกว่า ทังซะกุ (tanzaku)
+        แล้วนำไปแขวนไว้กับกิ่งไผ่เพื่ออธิษฐานขอพรจากดวงดาว
+      </div> -->
+
+      <div class="form-div">
+        <form class="my-form" id="my-form">
+          <div class="desc2">
+            Make a wish here ⭐️
+          </div>
+          <div>
+            <label for="name">Name (optional) : </label>
+            <input type="text" id="name" name="name" / placeholder="Eiei #5"><br />
+          </div>
+          <div class="desc3">
+            Your wish :
+          </div>
+          <div class="wish">
+            <input
+              type="radio"
+              id="wish1"
+              name="wish"
+              value="幸せになりますように。"
+            />
+            <label for="wish1">幸せになりますように。ขอให้มีความสุข</label
+            ><br />
+            <input
+              type="radio"
+              id="wish2"
+              name="wish"
+              value="健康でありますように。"
+            />
+            <label for="wish2">健康でありますように。ขอให้มีสุขภาพแข็งแรง</label
+            ><br />
+            <input
+              type="radio"
+              id="wish3"
+              name="wish"
+              value="運命の人に出会えますように。"
+            />
+            <label for="wish3"
+              >運命の人に出会えますように。ขอให้เจอเนื้อคู่</label
+            ><br />
+            <input
+              type="radio"
+              id="wish4"
+              name="wish"
+              value="素晴らしい年になりますように。"
+            />
+            <label for="wish4"
+              >素晴らしい年になりますように。ขอให้ปีนี้เป็นปีที่ดีเยี่ยม</label
+            ><br />
+            <input
+              type="radio"
+              id="wish5"
+              name="wish"
+              value="せかいがへいわになりますように。"
+            />
+            <label for="wish5"
+              >せかいがへいわになりますように。ขอให้โลกมีสันติ</label
+            ><br />
+            <input type="radio" id="wishopt" name="wish" value="optional" />
+            <label for="wishopt">Others</label>
+            <input type="text" id="opt" name="opt" value="" /><br />
+          </div>
+          <div class="desc4">
+            <label for="color">Your tanzaku (paper) color :</label>
+            <select id="color" name="color">
+              <option value="blue">Blue</option>
+              <option value="red">Red</option>
+              <option value="yellow">Yellow</option>
+              <option value="violet">Violet</option>
+            </select>
+          </div>
+          <input class="btn" type="submit" value="Make a wish" />
+        </form>
+      </div>
+      <div class="bamboo">
+        <img class="bamboo-img" src="pics/bamboo.png" />
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="javascript/index.js"></script>
+  </body>
+</html>
