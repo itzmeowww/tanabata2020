@@ -23,12 +23,12 @@ let tone = {
 };
 $(document).ready(() => {
   $("#opt").on("click", () => {
-    console.log("eiei");
+    // console.log("eiei");
     $("#wishopt").prop("checked", true);
   });
 
   $(".readmore").on("click", () => {
-    console.log("click");
+    // console.log("click");
     $("#more").slideDown(2000);
     $(".readmore").hide();
     $(".closereadmore").show();
@@ -51,7 +51,7 @@ $(document).ready(() => {
         db.collection("wishes")
           .doc(id)
           .onSnapshot((doc) => {
-            console.log(doc.data());
+            // console.log(doc.data());
             data[id] = {
               color: doc.data().color,
               wish: doc.data().wish,
@@ -65,7 +65,7 @@ $(document).ready(() => {
     $(".card").hide();
   });
   $(".bamboo").on("click", () => {
-    console.log(wishesId);
+    // console.log(wishesId);
     let i = Math.round(Math.random() * wishesId.length);
     if (i >= wishesId.length) i = 0;
     let id = wishesId[i];
@@ -73,7 +73,7 @@ $(document).ready(() => {
       alert("We are loading <3");
     } else {
       $(".card").show();
-      console.log(data[id]);
+      // console.log(data[id]);
       $(".wname").text(data[id].name);
       $(".wwish").text(data[id].wish);
 
@@ -155,7 +155,7 @@ $(document).ready(() => {
     if (myWish == "") {
       alert("Please enter your wish =)");
     } else {
-      console.log(myWish, color);
+      // console.log(myWish, color);
       db.collection("wishes")
         .add({
           name: name,
@@ -164,7 +164,7 @@ $(document).ready(() => {
         })
         .then(() => {
           alert("Success!");
-          console.log("Added");
+          // console.log("Added");
         });
     }
   });
