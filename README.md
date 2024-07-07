@@ -2,7 +2,7 @@
 
 note: use environment variable to store secret data, such as values in firebaseConfig, dont put them directly on your github
 
-*** Nice to visit: ***
+***Nice to visit:***
 
 **2020**
 main web: https://itzmeowww.github.io/tanabata2020/
