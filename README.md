@@ -20,10 +20,6 @@ github: https://github.com/pctkpp/tnbt2022
 main web: https://abhi-ya.github.io/Tanabata/
 github: https://github.com/Abhi-Ya/Tanabata
 
-**2023**
-main web: https://abhi-ya.github.io/Tanabata/
-github: https://github.com/Abhi-Ya/Tanabata
-
 **2024**
 main web: https://phooppp.github.io/Tanabata-2024
 github: https://github.com/PHOOppp/Tanabata-2024
